@@ -1,0 +1,26 @@
+# ---- Python ----
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Arquivos temporários
+*.log
+*.cache
+
+# ---- Streamlit ----
+.streamlit/
+
+# Jupyter / desenvolvimento
+.ipynb_checkpoints
+
+# SO / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Ambiente
+.env
+*.env
