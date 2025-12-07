@@ -7,7 +7,7 @@ GA_ID = "G-E922YWBZM7"  # substitua pelo seu ID real
 
 GA_SCRIPT = f"""
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E922YWBZM7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){{dataLayer.push(arguments);}}
@@ -15,8 +15,6 @@ GA_SCRIPT = f"""
   gtag('config', '{GA_ID}');
 </script>
 """
-
-
 
 st.markdown(GA_SCRIPT, unsafe_allow_html=True)
 
