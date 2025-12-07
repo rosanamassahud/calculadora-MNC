@@ -16,13 +16,13 @@ GA_SCRIPT = f"""
 </script>
 """
 
-st.markdown(GA_SCRIPT, unsafe_allow_html=True)
-
 st.set_page_config(
     page_title="Home", 
     layout="wide",initial_sidebar_state="collapsed")
 
 #Corpo da página
+st.markdown(GA_SCRIPT, unsafe_allow_html=True)
+
 st.markdown("""
 <style>
 h1, h2, h3, h4, h5, h6 {
