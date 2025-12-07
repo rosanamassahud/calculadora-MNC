@@ -1,6 +1,7 @@
+"""Página Inicial"""
 import streamlit as st
 
-"""Página Inicial"""
+
 # --- Google Analytics ---
 GA_ID = "G-E922YWBZM7"  # substitua pelo seu ID real
 
