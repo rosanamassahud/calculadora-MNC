@@ -65,10 +65,6 @@ def runge_kutta_2(fxy, x0, y0, a, b, n):
         # Atualizar o valor de x
         x[i+1] = x[i] + h
 
-    # Imprimir os resultados
-    #for i in range(n + 1):
-    #    print(f"x = {x[i]:.2f}, y = {y[i]:.4f}")
-
     table_result = pd.DataFrame([x,y]).pivot_table(columns=['x','y'])
     
     return h, table_result
