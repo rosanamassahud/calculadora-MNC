@@ -1,5 +1,7 @@
 """Página Inicial"""
 import streamlit as st
+from streamlit.components.v1 import html
+
 
 
 # --- Google Analytics ---
@@ -21,7 +23,8 @@ st.set_page_config(
     layout="wide",initial_sidebar_state="collapsed")
 
 #Corpo da página
-st.markdown(GA_SCRIPT, unsafe_allow_html=True)
+#st.markdown(GA_SCRIPT, unsafe_allow_html=True)
+html(GA_SCRIPT, height=0)
 
 st.markdown("""
 <style>
