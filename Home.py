@@ -24,7 +24,7 @@ st.set_page_config(
 
 #Corpo da página
 #st.markdown(GA_SCRIPT, unsafe_allow_html=True)
-html(GA_SCRIPT, height=0)
+html(GA_SCRIPT, height=10)
 
 st.markdown("""
 <style>
