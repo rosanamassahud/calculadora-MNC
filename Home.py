@@ -8,8 +8,8 @@ from pathlib import Path
 # =========================
 COUNTER_FILE = Path("counter.txt")
 
-if not COUNTER_FILE.exists():
-    COUNTER_FILE.write_text("0")
+#if not COUNTER_FILE.exists():
+#    COUNTER_FILE.write_text("0")
 
 if "counted" not in st.session_state:
     count = int(COUNTER_FILE.read_text())
