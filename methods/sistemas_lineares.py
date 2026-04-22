@@ -92,6 +92,22 @@ def decomposicao_LU(A):
     print(A_copy)
     return A_copy
 
+def pivotar(A,b,k):
+    coluna_especifica = k
+
+    # 3. Calcular o valor absoluto da coluna e encontrar o índice da linha
+    # np.abs(arr[:, coluna_especifica]) obtém a coluna
+    # np.argmax(...) encontra o índice da linha
+    linha_index = np.abs(A[:, coluna_especifica]).argmax(axis=0)
+
+    print(f"Array:\n{A}")
+    print(f"Coluna analisada: {coluna_especifica}")
+    print(f"Índice da linha com o maior valor absoluto: {linha_index}")
+    print(f"Valor original: {A[linha_index, coluna_especifica]}")
+    #Faz a troca
+    A[[linha_index,k]]=A[[k,linha_index]]
+    b[[linha_index,k]] = b[[k,linha_index]]
+
 def gauss(A, b):
     '''
     :param A: matriz de coeficientes
@@ -105,19 +121,30 @@ def gauss(A, b):
     b_copy = b.copy()
     for k in range(0,n-1):
         for i in range(k+1,n):
-            m = float(A_copy[i][k]/A_copy[k][k])
-            #A[i][k]=0
-            for j in range(k,n):
-                #print(f'A[{i}][{j}]=A[{i}][{j}]-{m}*A[{k}][{j}]')
-                #print(f'A[{i}][{j}]={A[i][j]}-{m}*{A[k][j]}')
-                A_copy[i][j] = float(A_copy[i][j]-float(m*A_copy[k][j]))
-                #print(A[i][j])
-            b_copy[i] = float(b_copy[i]) - float(m*b_copy[k])
-            #print(b[i])
-            A_copy[i][k] = 0
+            if(A_copy[k][k]==0):
+                '''
+                print('A antes da troca', A_copy)
+                print('b antes da troca', b_copy)
+                pivotar(A_copy, b_copy, k)
+                print('A depois da troca', A_copy)
+                print('b depois da troca', b_copy)
+                '''
+                return -1
+            else:
+                m = float(A_copy[i][k]/A_copy[k][k])
+                #A[i][k]=0
+                for j in range(k,n):
+                    #print(f'A[{i}][{j}]=A[{i}][{j}]-{m}*A[{k}][{j}]')
+                    #print(f'A[{i}][{j}]={A[i][j]}-{m}*{A[k][j]}')
+                    A_copy[i][j] = float(A_copy[i][j]-float(m*A_copy[k][j]))
+                    #print(A[i][j])
+                b_copy[i] = float(b_copy[i]) - float(m*b_copy[k])
+                #print(b[i])
+                A_copy[i][k] = 0
     #print(A_copy)
     #print(b_copy)
     #fase da resolução
+          
     return retroativa(A_copy,b_copy)
 
 def decomposicao_cholesky(A):
@@ -305,6 +332,13 @@ def gauss_seidel(A,b, maxiter, eps):
 
 if(__name__ == '__main__'):
     # teste para substituição sucessiva
+    A = np.array([[0.252,0.36,0.2],[0.112,0.16,0.24],[0.147,0.21,0.25]],dtype=float)
+    b = np.array([7,8,9],dtype=float)
+    x = gauss(A,b)
+    print('Solução: {}'.format(x))
+    if(x!=-1):
+        r = residuo(A, b, x)
+        print('Residuo: {}->{}'.format(r, np.rint(r)))
     '''
     A = np.array([[2,0,0,0],[3,5,0,0],[1,-6,8,0],[-1,4,-3,9]])
     b = np.array([4,1,48,6])
@@ -406,6 +440,7 @@ if(__name__ == '__main__'):
     r = residuo(A,b,x)
     print('residuo = ', r)
     '''
+    '''
     A = np.array([[5,1,1],
          [3,4,1],
          [3,3,6]])
@@ -413,3 +448,4 @@ if(__name__ == '__main__'):
     x,it = jacobi(A,b, 10, 0.05)
     print('Resultado gauss-jacobi: ', x, 'Com ', it, 'iterações')
     residuo = residuo(A,b,x)
+    '''

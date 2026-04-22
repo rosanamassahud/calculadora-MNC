@@ -46,7 +46,13 @@ if (bt_resolver):
         b = np.array(b, dtype=float)
         if(metodo == 'Eliminação de Gauss'):
             resultado = gauss(A, b)
-            result_str = "Solução: {}".format(resultado)
+            if(resultado==-1):
+                erro = True
+                result_str = "Não é possível efetuar o cálculo"
+                st.error('É necessário pivotação parcial para resolver esse sistema')
+            else:
+                result_str = "Solução: {}".format(resultado)
+            
         elif(metodo == 'Decomposição LU'):
             resultado = LU(A,b)
             result_str = "Solução: {}".format(resultado)
