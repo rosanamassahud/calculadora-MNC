@@ -52,7 +52,6 @@ if (bt_resolver):
                 st.error('É necessário pivotação parcial para resolver esse sistema')
             else:
                 result_str = "Solução: {}".format(resultado)
-            
         elif(metodo == 'Decomposição LU'):
             resultado = LU(A,b)
             result_str = "Solução: {}".format(resultado)

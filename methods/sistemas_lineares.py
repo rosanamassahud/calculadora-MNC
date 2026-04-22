@@ -113,6 +113,7 @@ def gauss(A, b):
     :param A: matriz de coeficientes
     :param b: matriz de coeficientes independentes
     :return: solução do sistema
+    :update: add um tratamento para nao dar erro se precisar de pivotacao
     '''
     #algoritmo do livro do Ruggiero
     #supor que o elemento  que está na posição akk é diferente de zero no início da etapa k
