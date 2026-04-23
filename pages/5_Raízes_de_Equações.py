@@ -148,7 +148,7 @@ elif(metodo=='Método da Bisseção'):
                     st.error(msg_erro)
                 else:
                     st.success(f'Raiz: {raiz:.6f}')
-                    st.write(f'Interações: {iter}')
+                    st.write(f'Iterações: {iter}')
                     st.dataframe(tabela)
 
                     #Plotar um gráfico com a raiz em destaque
@@ -204,7 +204,7 @@ elif(metodo=='Método da Falsa Posição'):
                     st.error(msg_erro)
                 else:
                     st.success(f'Raiz: {raiz:.6f}')
-                    st.write(f'Interações: {iter}')
+                    st.write(f'Iterações: {iter}')
                     st.dataframe(tabela)
 
                     #Plotar um gráfico com a raiz em destaque
@@ -277,7 +277,7 @@ Tente escolher outra forma para <strong>g(x)</strong>.
 """, unsafe_allow_html=True)
             else:
                 st.success(f'Raiz: {raiz:.6f}')
-                st.write(f'Interações: {iter}')
+                st.write(f'Iterações: {iter}')
                 st.dataframe(tabela)
 
                 #Plotar um gráfico com a raiz em destaque
@@ -329,7 +329,7 @@ elif(metodo=='Método de Newton-Raphson'):
                 st.error(msg_erro)
             else:
                 st.success(f'Raiz: {raiz:.6f}')
-                st.write(f'Interações: {iter}')
+                st.write(f'Iterações: {iter}')
                 st.dataframe(tabela)
 
                 #Plotar um gráfico com a raiz em destaque
@@ -382,7 +382,7 @@ elif(metodo=='Método da Secante'):
                     st.error(msg_erro)
                 else:
                     st.success(f'Raiz: {raiz:.6f}')
-                    st.write(f'Interações: {iter}')
+                    st.write(f'Iterações: {iter}')
                     st.dataframe(tabela)
 
                     #Plotar um gráfico com a raiz em destaque
