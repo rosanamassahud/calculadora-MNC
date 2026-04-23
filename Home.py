@@ -117,7 +117,7 @@ st.markdown(
     <div class="footer">
         © 2025 • Calculadora MNC • Desenvolvida por <b>Rosana Massahud</b>
         <br>
-        Última atualização: <b>22/04/2026</b>
+        Última atualização: <b>23/04/2026</b>
     </div>
     """,
     unsafe_allow_html=True
