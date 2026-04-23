@@ -3,6 +3,7 @@ import streamlit as st
 
 from pathlib import Path
 
+"""
 # =========================
 # Contador simples de acessos
 # =========================
@@ -18,7 +19,7 @@ if "counted" not in st.session_state:
     st.session_state["counted"] = True
 else:
     count = int(COUNTER_FILE.read_text())
-
+"""
 st.set_page_config(
     page_title="Calculadora MNC",
     layout="wide",

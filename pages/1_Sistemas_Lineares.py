@@ -46,7 +46,7 @@ if (bt_resolver):
         b = np.array(b, dtype=float)
         if(metodo == 'Eliminação de Gauss'):
             resultado = gauss(A, b)
-            if(resultado==-1):
+            if(resultado is None):
                 erro = True
                 result_str = "Não é possível efetuar o cálculo"
                 st.error('É necessário pivotação parcial para resolver esse sistema')
