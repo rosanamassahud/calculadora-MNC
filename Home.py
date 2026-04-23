@@ -3,23 +3,7 @@ import streamlit as st
 
 from pathlib import Path
 
-"""
-# =========================
-# Contador simples de acessos
-# =========================
-COUNTER_FILE = Path("counter.txt")
 
-#if not COUNTER_FILE.exists():
-#    COUNTER_FILE.write_text("0")
-
-if "counted" not in st.session_state:
-    count = int(COUNTER_FILE.read_text())
-    count += 1
-    COUNTER_FILE.write_text(str(count))
-    st.session_state["counted"] = True
-else:
-    count = int(COUNTER_FILE.read_text())
-"""
 st.set_page_config(
     page_title="Calculadora MNC",
     layout="wide",
