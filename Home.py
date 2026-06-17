@@ -82,10 +82,14 @@ st.markdown(
         <li><b>Equações Diferenciais Ordinárias</b></li>
     </ul>
 
-    </div>
-
+    Adicionalmente, foi produzido um e-book com todos os assuntos mencionados
+    e suas respectivas implementações em Python.
     <br>
 
+    <a href="https://drive.google.com/file/d/1sjZj5ufaDyFGwcE-BCJmoTbJTmkXWFL-/view?usp=sharing" target="_blank">Link para o e-book</a>
+    
+    </div>
+    
     <h4 style="text-align:center;">
     👉 Selecione uma categoria no menu lateral e explore as funcionalidades disponíveis.
     </h4>
@@ -101,7 +105,7 @@ st.markdown(
     <div class="footer">
         © 2025 • Calculadora MNC • Desenvolvida por <b>Rosana Massahud</b>
         <br>
-        Última atualização: <b>23/04/2026</b>
+        Última atualização: <b>17/06/2026</b>
     </div>
     """,
     unsafe_allow_html=True
